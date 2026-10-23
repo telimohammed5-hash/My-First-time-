@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PureTouch Cleaning Household Products</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              accent: '#06b6d4',
+              emerald: '#10b981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-pattern {
+      background-color: #f8fafc;
+      background-image: radial-gradient(#0ea5e9 0.75px, transparent 0.75px), radial-gradient(#06b6d4 0.75px, #f8fafc 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white">
+
+  <!-- Top Notification / Free Hosting & Domain Notice -->
+  <aside class="bg-gradient-to-r from-cyan-600 to-blue-700 text-white text-xs sm:text-sm py-2 px-4 shadow-sm" aria-label="Announcement">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider">Free Deployment</span>
+        <span>Ready to host 100% free for lifetime on GitHub Pages, Netlify, or Vercel with free SSL!</span>
+      </div>
+      <a href="#free-domain-guide" class="underline hover:text-cyan-200 font-medium transition text-xs sm:text-sm flex items-center gap-1">
+        Setup Free Lifetime Site <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+          <i class="fa-solid fa-spray-can-sparkles text-xl"></i>
+        </div>
+        <div>
+          <div class="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight flex items-center gap-1">
+            PureTouch <span class="text-xs bg-cyan-100 text-cyan-800 font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider">Clean</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-medium tracking-wide">Household Cleaning Products</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+        <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+        <a href="#products" class="hover:text-brand-600 transition-colors">Products Catalog</a>
+        <a href="#why-us" class="hover:text-brand-600 transition-colors">Why PureTouch</a>
+        <a href="#contact" class="hover:text-brand-600 transition-colors">Contact & Proprietor</a>
+        <a href="#free-domain-guide" class="text-amber-600 hover:text-amber-700 flex items-center gap-1">
+          <i class="fa-solid fa-circle-question text-xs"></i> Free Domain Guide
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Manage Catalog Trigger Button -->
+        <button onclick="openCatalogModal()" class="relative inline-flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-semibold rounded-xl border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 hover:text-slate-900 shadow-sm transition">
+          <i class="fa-solid fa-sliders text-brand-600"></i>
+          <span class="hidden sm:inline">Manage Catalog &amp; Prices</span>
+          <span class="sm:hidden">Admin</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping absolute -top-1 -right-1"></span>
+        </button>
+
+        <!-- Direct WhatsApp Order CTA -->
+        <a href="https://wa.me/919876543210?text=Hello%20PureTouch,%20I%20would%20like%20to%20inquire%20about%20your%20household%20cleaning%20products." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl shadow-md shadow-emerald-600/25 transition transform active:scale-95">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="hidden lg:inline">WhatsApp Order</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 p-2 text-xl focus:outline-none">
+          <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#home" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-1.5 hover:text-brand-600">Home</a>
+      <a href="#products" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-1.5 hover:text-brand-600">Products Catalog</a>
+      <a href="#why-us" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-1.5 hover:text-brand-600">Why Choose PureTouch</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-1.5 hover:text-brand-600">Proprietor &amp; Contact</a>
+      <a href="#free-domain-guide" onclick="toggleMobileMenu()" class="block text-amber-600 font-medium py-1.5">Free Lifetime Setup Guide</a>
+      <div class="pt-2">
+        <button onclick="openCatalogModal(); toggleMobileMenu();" class="w-full py-2.5 rounded-xl border border-slate-300 font-semibold text-sm text-slate-800 bg-slate-50 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-sliders text-brand-600"></i> Manage Catalog &amp; Price Correction
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative hero-pattern pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-slate-200 overflow-hidden">
+    <!-- Glow effect -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-200/50 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs sm:text-sm font-semibold tracking-wide">
+            <i class="fa-solid fa-certificate text-cyan-600"></i> Premium Quality Detergents &amp; Disinfectants
+          </div>
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Spotless Clean, <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-cyan-600 to-emerald-600">Gentle Care for Every Home</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Welcome to <strong class="text-slate-800">PureTouch Cleaning Household Products</strong>. Formulated with tough active enzymes for rigorous stain removal while preserving fabric softness and household hygiene.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#products" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-cyan-600 hover:from-brand-700 hover:to-cyan-700 text-white font-semibold text-sm sm:text-base shadow-lg shadow-cyan-600/25 transition transform active:scale-95 flex items-center gap-2">
+              <i class="fa-solid fa-basket-shopping"></i> Explore Range
+            </a>
+            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold text-sm sm:text-base shadow-sm transition flex items-center gap-2">
+              <i class="fa-solid fa-truck-ramp-box text-slate-600"></i> Wholesale &amp; Bulk Inquiry
+            </a>
+          </div>
+
+          <!-- Quick trust badges -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <div class="font-extrabold text-xl text-slate-900">100% Safe</div>
+              <div class="text-xs text-slate-500 font-medium">Gentle on Hands</div>
+            </div>
+            <div>
+              <div class="font-extrabold text-xl text-slate-900">Active Foam</div>
+              <div class="text-xs text-slate-500 font-medium">Deep Stain Action</div>
+            </div>
+            <div>
+              <div class="font-extrabold text-xl text-slate-900">Direct Factory</div>
+              <div class="text-xs text-slate-500 font-medium">Best Price Assurance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-white/60 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-500/10 rounded-full blur-2xl"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Flagship Formula</span>
+              <span class="text-emerald-600 font-semibold text-xs flex items-center gap-1">
+                <i class="fa-solid fa-check-circle"></i> ISO Quality Grade
+              </span>
+            </div>
+
+            <!-- Product visual placeholder -->
+            <div class="w-full h-56 bg-gradient-to-b from-blue-100/60 to-cyan-50 rounded-2xl flex flex-col items-center justify-center p-6 text-center border border-cyan-100/80 mb-6">
+              <div class="w-20 h-20 bg-white rounded-full shadow-md flex items-center justify-center text-brand-600 text-3xl mb-3">
+                <i class="fa-solid fa-bottle-droplet"></i>
+              </div>
+              <h3 class="font-heading font-bold text-slate-800 text-lg">PureTouch Detergent &amp; Cleaners</h3>
+              <p class="text-xs text-slate-500 mt-1">Laboratory formulated for tough stains and fresh fragrance</p>
+            </div>
+
+            <!-- Proprietor Trust Box -->
+            <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold font-heading">
+                PT
+              </div>
+              <div class="text-left">
+                <p class="text-xs text-slate-500 uppercase font-semibold">Proprietorship Brand</p>
+                <h4 class="font-bold text-slate-900 text-sm">Noorjahan Teli &bull; PureTouch</h4>
+                <p class="text-xs text-slate-600">Contact: Mohammed Ilyas Teli</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Products Showcase Section -->
+  <section id="products" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-cyan-600 mb-1">Spotless Product Line</div>
+        <h2 class="font-heading text-3xl font-extrabold text-slate-900">Featured Household Cleaning Range</h2>
+        <p class="text-slate-500 text-sm mt-1">Browse our products or quickly edit prices anytime using the manager mode.</p>
+      </div>
+      
+      <!-- Category Filter Pills & Admin Shortcut -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button onclick="filterCategory('All')" class="category-btn active px-4 py-2 text-xs font-semibold rounded-xl bg-slate-900 text-white shadow-sm transition" data-cat="All">All</button>
+        <button onclick="filterCategory('Detergent')" class="category-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition" data-cat="Detergent">Detergents</button>
+        <button onclick="filterCategory('Liquid Cleaners')" class="category-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition" data-cat="Liquid Cleaners">Liquid Cleaners</button>
+        <button onclick="filterCategory('Fabric Care')" class="category-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition" data-cat="Fabric Care">Fabric Care</button>
+        
+        <button onclick="openCatalogModal()" class="ml-auto inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-xl bg-cyan-50 border border-cyan-200 text-cyan-800 hover:bg-cyan-100 transition">
+          <i class="fa-solid fa-plus-circle text-cyan-600"></i> Add New Product
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Grid Container -->
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="noProductsFound" class="hidden text-center py-16 bg-white rounded-3xl border border-dashed border-slate-300 p-8">
+      <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400 text-2xl mb-3">
+        <i class="fa-solid fa-box-open"></i>
+      </div>
+      <h3 class="text-lg font-bold text-slate-800">No products found in this category</h3>
+      <p class="text-sm text-slate-500 mt-1">Click "Add New Product" to populate your catalog.</p>
+    </div>
+  </section>
+
+  <!-- Why Choose PureTouch Section -->
+  <section id="why-us" class="py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">The PureTouch Difference</span>
+        <h2 class="font-heading text-3xl font-extrabold text-slate-900 mt-1">Why Choose PureTouch Household Cleaners?</h2>
+        <p class="text-slate-600 text-sm mt-2">Engineered to achieve maximum cleaning power with high efficiency, gentle protection, and unbeatable bulk pricing.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Feature 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-soap"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">High Foaming Action</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Generates rich, active lather that effortlessly lifts stubborn dirt and greasiness without wasting product.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">Tough on Stains</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Advanced bio-enzyme formulation penetrates heavy kitchen grease, food stains, collar grime, and floor marks.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">Fabric &amp; Skin Friendly</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">pH-balanced ingredients protect clothes fibers and bright colors while ensuring gentle care for sensitive hands.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">Wholesale &amp; Bulk Advantage</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Direct manufacturer rates for apartment complexes, retail resellers, laundromats, and commercial establishments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Credentials & Contact Section -->
+  <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Contact Info Card -->
+      <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 text-white rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+        <div>
+          <span class="text-xs uppercase font-bold tracking-widest text-cyan-400">Business Details</span>
+          <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1 mb-4">PureTouch Household Products</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Contact us directly for custom bulk orders, retail distribution franchises, or price quotes.
+          </p>
+
+          <div class="space-y-4 text-sm">
+            <!-- Proprietor Badge -->
+            <div class="flex items-start gap-3 bg-white/10 p-3.5 rounded-2xl border border-white/10">
+              <i class="fa-solid fa-user-tie text-cyan-400 text-lg mt-0.5"></i>
+              <div>
+                <span class="text-xs text-slate-300 block uppercase font-medium">Proprietor</span>
+                <span class="text-base font-bold text-white">Noorjahan Teli</span>
+              </div>
+            </div>
+
+            <!-- Contact Person Badge -->
+            <div class="flex items-start gap-3 bg-white/10 p-3.5 rounded-2xl border border-white/10">
+              <i class="fa-solid fa-address-book text-emerald-400 text-lg mt-0.5"></i>
+              <div>
+                <span class="text-xs text-slate-300 block uppercase font-medium">Contact Person</span>
+                <span class="text-base font-bold text-white">Mohammed Ilyas Teli</span>
+                <p class="text-xs text-slate-300 mt-0.5">Primary Inquiries &amp; Operations</p>
+              </div>
+            </div>
+
+            <!-- Direct Contact Links -->
+            <div class="flex items-center gap-3 p-2 text-slate-300">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+              <span>Direct WhatsApp: <strong>+91 98765 43210</strong></span>
+            </div>
+            <div class="flex items-center gap-3 p-2 text-slate-300">
+              <i class="fa-solid fa-envelope text-cyan-400 text-lg"></i>
+              <span>puretouch.cleaning@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/15">
+          <p class="text-xs text-slate-400">PureTouch delivers across residential, retail, and commercial supply channels.</p>
+        </div>
+      </div>
+
+      <!-- Quick Inquiry Form -->
+      <div class="lg:col-span-7 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <h3 class="font-heading text-2xl font-bold text-slate-900 mb-2">Send an Instant Order or Inquiry</h3>
+          <p class="text-sm text-slate-500 mb-6">Fill in details to instantly send a formatted inquiry directly to Mohammed Ilyas Teli over WhatsApp.</p>
+
+          <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Your Name</label>
+                <input type="text" id="inqName" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Phone Number</label>
+                <input type="tel" id="inqPhone" required placeholder="e.g. 9876543210" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Product of Interest</label>
+                <select id="inqProduct" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white">
+                  <option value="All Products / Bulk Order">All Products / General Bulk Inquiry</option>
+                  <option value="PureTouch Detergent Powder 1kg">PureTouch Detergent Powder 1kg</option>
+                  <option value="PureTouch Detergent Powder 5kg Mega Saver">PureTouch Detergent Powder 5kg Mega Saver</option>
+                  <option value="PureTouch Fabric Softener 1L">PureTouch Fabric Softener 1L</option>
+                  <option value="PureTouch Dishwash Active Gel 500ml">PureTouch Dishwash Active Gel 500ml</option>
+                  <option value="PureTouch Surface & Floor Disinfectant 1L">PureTouch Surface &amp; Floor Disinfectant 1L</option>
+                  <option value="PureTouch Glass & Multi-Shine Cleaner 500ml">PureTouch Glass &amp; Multi-Shine Cleaner 500ml</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Estimated Quantity</label>
+                <input type="text" id="inqQty" placeholder="e.g. 10 Packs or 5 Boxes" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Address / Specific Notes</label>
+              <textarea id="inqNotes" rows="3" placeholder="Enter your city/area and any specific questions..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-md shadow-emerald-600/20 transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Send Inquiry via WhatsApp
+            </button>
+          </form>
+        </div>
+        
+        <div class="mt-4 text-center">
+          <span class="text-[11px] text-slate-400">Response guaranteed by Mohammed Ilyas Teli within business hours.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 100% Free Lifetime Domain & Free Hosting Blueprint Section -->
+  <section id="free-domain-guide" class="py-14 bg-gradient-to-b from-amber-50 to-orange-50/40 border-t border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider mb-2">
+          <i class="fa-solid fa-gift text-amber-600"></i> Lifetime Free Guide
+        </span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900">How to Launch PureTouch Website with a Free Domain for Life</h2>
+        <p class="text-slate-600 text-sm mt-2">
+          You don't need to pay recurring hosting or maintenance charges. Here is the exact roadmap to host this website completely free forever:
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <!-- Option 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-amber-200/80 shadow-sm relative">
+          <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-sm mb-3">1</div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">GitHub Pages (100% Free Forever)</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Host this single `index.html` file on GitHub. You get a fast, secure domain name like:
+            <code class="block mt-1 bg-slate-100 p-1.5 rounded text-brand-700 font-mono text-[11px]">puretouch-products.github.io</code>
+          </p>
+          <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">Zero Cost, Free SSL</span>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-amber-200/80 shadow-sm relative">
+          <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold text-sm mb-3">2</div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">Netlify / Vercel Free Tier</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Drag-and-drop this single HTML file into Netlify Drop (<span class="underline">app.netlify.com/drop</span>). You get instant free lifetime web address:
+            <code class="block mt-1 bg-slate-100 p-1.5 rounded text-brand-700 font-mono text-[11px]">puretouch-cleaning.netlify.app</code>
+          </p>
+          <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">Instant 1-Click Launch</span>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-amber-200/80 shadow-sm relative">
+          <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm mb-3">3</div>
+          <h4 class="font-bold text-slate-900 text-base mb-1">Free Custom Subdomains / .is-a.dev</h4>
+          <p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Want a cleaner domain without paying? Use free developer registry subdomains (like js.org or .is-a.dev) or link your custom <code class="text-[11px] bg-slate-100 px-1 py-0.5 rounded">puretouch.in</code> whenever you decide to register.
+          </p>
+          <span class="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">Custom Brand Identity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-800">
+        <!-- Col 1 -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2 text-white font-heading font-extrabold text-xl">
+            <i class="fa-solid fa-spray-can-sparkles text-cyan-400"></i> PureTouch
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Leading manufacturer and supplier of household cleaning products, washing powders, disinfectants, and sanitizing solutions.
+          </p>
+          <div class="pt-2 text-xs text-slate-300">
+            <span class="block"><strong>Proprietor:</strong> Noorjahan Teli</span>
+            <span class="block"><strong>Operations &amp; Contact:</strong> Mohammed Ilyas Teli</span>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="#products" class="hover:text-white transition">Product Catalog</a></li>
+            <li><a href="#why-us" class="hover:text-white transition">Why PureTouch</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact &amp; Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-3">Quick Order</h4>
+          <p class="text-xs mb-3 text-slate-400">For fast delivery and bulk packaging quotes:</p>
+          <a href="https://wa.me/919876543210" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-2 rounded-lg transition">
+            <i class="fa-brands fa-whatsapp"></i> Chat with Mohammed Ilyas
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; <span id="currentYear"></span> PureTouch Cleaning Household Products. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <span>Proprietor: Noorjahan Teli</span>
+          <span>&bull;</span>
+          <span>Contact: Mohammed Ilyas Teli</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= PRODUCT MANAGEMENT MODAL (ADMIN / PRICE CORRECTION) ================= -->
+  <div id="catalogModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-6 max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-5 sm:p-6 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950 px-2 py-0.5 rounded">Management Portal</span>
+          <h3 class="font-heading text-xl sm:text-2xl font-bold mt-1">Product Catalog &amp; Price Correction</h3>
+          <p class="text-xs text-slate-300">Add products, edit live prices, or restore default listings. All updates save locally.</p>
+        </div>
+        <button onclick="closeCatalogModal()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Content Body (Tabs) -->
+      <div class="p-5 sm:p-6 overflow-y-auto flex-1 space-y-8">
+        
+        <!-- Section 1: Add New Product Form -->
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
+            <i class="fa-solid fa-circle-plus text-brand-600"></i> Add New Product to Catalog
+          </h4>
+          <p class="text-xs text-slate-500 mb-4">Provide details below to immediately list a new household product.</p>
+
+          <form id="addProductForm" onsubmit="handleAddNewProduct(event)" class="space-y-4">
+            <div class="grid sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Product Name *</label>
+                <input type="text" id="newProdName" required placeholder="e.g. PureTouch Lemon Dish Gel" class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Category *</label>
+                <select id="newProdCat" class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500 bg-white">
+                  <option value="Detergent">Detergent</option>
+                  <option value="Liquid Cleaners">Liquid Cleaners</option>
+                  <option value="Fabric Care">Fabric Care</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Pack Size / Weight *</label>
+                <input type="text" id="newProdSize" required placeholder="e.g. 1 Litre or 5 kg" class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Price (₹) *</label>
+                <input type="number" id="newProdPrice" required min="1" step="1" placeholder="e.g. 199" class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Original / MRP (₹)</label>
+                <input type="number" id="newProdOriginalPrice" min="1" step="1" placeholder="e.g. 240 (optional)" class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">FontAwesome Icon Class</label>
+                <input type="text" id="newProdIcon" placeholder="fa-soap (optional)" class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Short Description</label>
+              <textarea id="newProdDesc" rows="2" placeholder="Key stain removal features or benefits..." class="w-full text-xs px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-500"></textarea>
+            </div>
+
+            <div class="flex justify-end">
+              <button type="submit" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition shadow-sm flex items-center gap-1.5">
+                <i class="fa-solid fa-check"></i> Save &amp; Add Product
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Section 2: Inline Price Correction Table -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h4 class="font-bold text-slate-900 text-base">Quick Price Correction &amp; Stock Check</h4>
+              <p class="text-xs text-slate-500">Edit any price in the table below and click 'Save Price' for instant correction.</p>
+            </div>
+            <button onclick="resetToDefaultCatalog()" class="text-xs text-rose-600 hover:text-rose-800 font-semibold flex items-center gap-1">
+              <i class="fa-solid fa-rotate-left"></i> Reset Defaults
+            </button>
+          </div>
+
+          <!-- Product Table for quick price correction -->
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl shadow-sm">
+            <table class="w-full text-left text-xs text-slate-600">
+              <thead class="bg-slate-100 text-slate-800 uppercase font-semibold text-[11px] border-b border-slate-200">
+                <tr>
+                  <th class="p-3">Product Name</th>
+                  <th class="p-3">Category / Size</th>
+                  <th class="p-3">Current Price (₹)</th>
+                  <th class="p-3">MRP (₹)</th>
+                  <th class="p-3 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductTableBody" class="divide-y divide-slate-200">
+                <!-- Injected via renderAdminTable() -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
+        <span class="text-xs text-slate-500">
+          <i class="fa-solid fa-shield-halved text-emerald-600"></i> PureTouch Admin Mode Active
+        </span>
+        <button onclick="closeCatalogModal()" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold">
+          Close Manager
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Message Box (no alert() used) -->
+  <div id="toastMessage" class="fixed bottom-6 right-6 z-50 hidden bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-2xl text-xs sm:text-sm font-medium flex items-center gap-3 border border-slate-700">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base" id="toastIcon"></i>
+    <span id="toastText">Action completed successfully!</span>
+  </div>
+
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    // Set dynamic current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Default Seed Catalog for PureTouch Cleaning Household Products
+    const DEFAULT_PRODUCTS = [
+      {
+        id: "pt-01",
+        name: "PureTouch Detergent Powder 1kg",
+        category: "Detergent",
+        size: "1 kg Pack",
+        price: 95,
+        originalPrice: 120,
+        inStock: true,
+        icon: "fa-soap",
+        desc: "Super-active foaming formula. Removes stubborn grease, dirt, and stains while caring for fabric threads."
+      },
+      {
+        id: "pt-02",
+        name: "PureTouch Detergent Powder 5kg Mega Saver",
+        category: "Detergent",
+        size: "5 kg Family Pack",
+        price: 430,
+        originalPrice: 550,
+        inStock: true,
+        icon: "fa-box",
+        desc: "High economy mega pack tailored for families and commercial laundries. Includes fabric brightening booster."
+      },
+      {
+        id: "pt-03",
+        name: "PureTouch Fabric Softener & Conditioner",
+        category: "Fabric Care",
+        size: "1 Litre Bottle",
+        price: 180,
+        originalPrice: 220,
+        inStock: true,
+        icon: "fa-wand-magic-sparkles",
+        desc: "Infuses long-lasting ocean breeze freshness, reduces static cling, and maintains plush towel and cloth softness."
+      },
+      {
+        id: "pt-04",
+        name: "PureTouch Dishwash Active Gel (Lemon)",
+        category: "Liquid Cleaners",
+        size: "500 ml Bottle",
+        price: 85,
+        originalPrice: 110,
+        inStock: true,
+        icon: "fa-sink",
+        desc: "Tough on grease, gentle on hands. One spoonful clears an entire sink of oily utensils with real lemon power."
+      },
+      {
+        id: "pt-05",
+        name: "PureTouch Surface & Floor Disinfectant",
+        category: "Liquid Cleaners",
+        size: "1 Litre Canister",
+        price: 140,
+        originalPrice: 175,
+        inStock: true,
+        icon: "fa-spray-can",
+        desc: "99.9% germ elimination. Leaves tiles, marble, and granite sparkling clean with a refreshing pine and floral aura."
+      },
+      {
+        id: "pt-06",
+        name: "PureTouch Glass & Multi-Shine Cleaner",
+        category: "Liquid Cleaners",
+        size: "500 ml Spray",
+        price: 99,
+        originalPrice: 130,
+        inStock: true,
+        icon: "fa-gem",
+        desc: "Streak-free crystal clear shine for mirrors, windows, TV screens, car windshields, and laminates."
+      }
+    ];
+
+    // Initialize or read from localStorage
+    function getStoredProducts() {
+      const stored = localStorage.getItem('puretouch_products');
+      if (stored) {
+        try {
+          return JSON.parse(stored);
+        } catch (e) {
+          console.error("Error reading localStorage", e);
+          return DEFAULT_PRODUCTS;
+        }
+      }
+      return DEFAULT_PRODUCTS;
+    }
+
+    let products = getStoredProducts();
+    let currentFilter = 'All';
+
+    function saveProducts() {
+      localStorage.setItem('puretouch_products', JSON.stringify(products));
+      renderCatalog();
+      renderAdminTable();
+    }
+
+    // Toast message helper (Never use alert)
+    function showToast(message, isError = false) {
+      const toast = document.getElementById('toastMessage');
+      const text = document.getElementById('toastText');
+      const icon = document.getElementById('toastIcon');
+
+      text.textContent = message;
+      if (isError) {
+        icon.className = 'fa-solid fa-circle-exclamation text-rose-400 text-base';
+      } else {
+        icon.className = 'fa-solid fa-circle-check text-emerald-400 text-base';
+      }
+
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    // Render Public Customer Catalog
+    function renderCatalog() {
+      const container = document.getElementById('productGrid');
+      const emptyState = document.getElementById('noProductsFound');
+
+      const filtered = currentFilter === 'All' 
+        ? products 
+        : products.filter(p => p.category === currentFilter);
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      container.innerHTML = filtered.map(p => {
+        const discount = p.originalPrice && p.originalPrice > p.price
+          ? Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100)
+          : null;
+
+        const whatsappMsg = encodeURIComponent(
+          `Hello PureTouch (Mohammed Ilyas Teli),\nI am interested in ordering: *${p.name}*\nPack Size: ${p.size}\nListed Price: ₹${p.price}\nPlease confirm availability and delivery.`
+        );
+
+        return `
+          <div class="bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+            
+            <!-- Top Card Visual Area -->
+            <div class="p-6 bg-gradient-to-br from-brand-50/70 to-slate-50 flex flex-col items-center justify-center relative min-h-[170px]">
+              ${discount ? `<span class="absolute top-4 left-4 bg-emerald-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full shadow-sm">${discount}% OFF</span>` : ''}
+              
+              <span class="absolute top-4 right-4 bg-white/90 text-slate-600 text-[11px] font-bold px-2 py-0.5 rounded-md border border-slate-200">
+                ${p.size}
+              </span>
+
+              <div class="w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center text-brand-600 text-3xl group-hover:scale-110 transition-transform duration-300">
+                <i class="fa-solid ${p.icon || 'fa-bottle-droplet'}"></i>
+              </div>
+
+              <span class="mt-3 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">${p.category}</span>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-heading font-bold text-slate-900 text-base leading-snug group-hover:text-brand-600 transition-colors">
+                  ${p.name}
+                </h3>
+                <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                  ${p.desc || 'Premium formulation tested for highest household cleanliness.'}
+                </p>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] text-slate-400 uppercase font-semibold">Special Offer</div>
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-xl font-extrabold text-slate-900">₹${p.price}</span>
+                    ${p.originalPrice ? `<span class="text-xs text-slate-400 line-through">₹${p.originalPrice}</span>` : ''}
+                  </div>
+                </div>
+
+                <a href="https://wa.me/919876543210?text=${whatsappMsg}" target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-md shadow-emerald-600/20 transition active:scale-95">
+                  <i class="fa-brands fa-whatsapp text-sm"></i> Inquire
+                </a>
+              </div>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Category Filter Function
+    function filterCategory(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = "category-btn active px-4 py-2 text-xs font-semibold rounded-xl bg-slate-900 text-white shadow-sm transition";
+        } else {
+          btn.className = "category-btn px-4 py-2 text-xs font-semibold rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition";
+        }
+      });
+      renderCatalog();
+    }
+
+    // Render Admin Management & Price Correction Table
+    function renderAdminTable() {
+      const tbody = document.getElementById('adminProductTableBody');
+      if (!tbody) return;
+
+      tbody.innerHTML = products.map((p, idx) => {
+        return `
+          <tr class="hover:bg-slate-50/80 transition">
+            <td class="p-3 font-semibold text-slate-900">
+              ${p.name}
+              <div class="text-[10px] text-slate-400 font-normal">ID: ${p.id}</div>
+            </td>
+            <td class="p-3">
+              <span class="inline-block bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-[11px] font-medium">${p.category}</span>
+              <div class="text-[10px] text-slate-500 mt-0.5">${p.size}</div>
+            </td>
+            <td class="p-3">
+              <div class="flex items-center gap-1">
+                <span class="text-slate-400 font-bold">₹</span>
+                <input type="number" id="price-input-${p.id}" value="${p.price}" min="1" step="1" class="w-20 text-xs px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-500 font-semibold text-slate-900">
+              </div>
+            </td>
+            <td class="p-3">
+              <div class="flex items-center gap-1">
+                <span class="text-slate-400 font-bold">₹</span>
+                <input type="number" id="mrp-input-${p.id}" value="${p.originalPrice || ''}" min="1" step="1" class="w-20 text-xs px-2 py-1 border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-brand-500 text-slate-600" placeholder="MRP">
+              </div>
+            </td>
+            <td class="p-3 text-right space-x-2">
+              <button onclick="updateProductPrice('${p.id}')" class="px-2.5 py-1 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-[11px] font-semibold transition" title="Save updated price">
+                <i class="fa-solid fa-floppy-disk"></i> Save Price
+              </button>
+              <button onclick="deleteProduct('${p.id}')" class="px-2 py-1 bg-rose-100 hover:bg-rose-200 text-rose-700 rounded-lg text-[11px] font-semibold transition" title="Delete product">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Update Live Price & MRP for product
+    function updateProductPrice(id) {
+      const priceVal = parseFloat(document.getElementById(`price-input-${id}`).value);
+      const mrpVal = parseFloat(document.getElementById(`mrp-input-${id}`).value);
+
+      if (isNaN(priceVal) || priceVal <= 0) {
+        showToast("Please enter a valid price greater than zero.", true);
+        return;
+      }
+
+      const prod = products.find(p => p.id === id);
+      if (prod) {
+        prod.price = priceVal;
+        prod.originalPrice = !isNaN(mrpVal) && mrpVal > 0 ? mrpVal : null;
+        saveProducts();
+        showToast(`Price for "${prod.name}" updated to ₹${priceVal}!`);
+      }
+    }
+
+    // Add New Product
+    function handleAddNewProduct(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('newProdName').value.trim();
+      const category = document.getElementById('newProdCat').value;
+      const size = document.getElementById('newProdSize').value.trim();
+      const price = parseFloat(document.getElementById('newProdPrice').value);
+      const originalPrice = parseFloat(document.getElementById('newProdOriginalPrice').value);
+      const icon = document.getElementById('newProdIcon').value.trim() || 'fa-spray-can-sparkles';
+      const desc = document.getElementById('newProdDesc').value.trim();
+
+      if (!name || isNaN(price) || price <= 0) {
+        showToast("Please fill in valid name and price.", true);
+        return;
+      }
+
+      const newProduct = {
+        id: "pt-" + Date.now().toString().slice(-5),
+        name: name,
+        category: category,
+        size: size,
+        price: price,
+        originalPrice: !isNaN(originalPrice) && originalPrice > 0 ? originalPrice : null,
+        icon: icon,
+        desc: desc || "Top cleaning action and fabric preservation formula."
+      };
+
+      products.unshift(newProduct);
+      saveProducts();
+      document.getElementById('addProductForm').reset();
+      showToast(`Added new product: ${name}!`);
+    }
+
+    // Delete Product
+    function deleteProduct(id) {
+      const prod = products.find(p => p.id === id);
+      const prodName = prod ? prod.name : "Product";
+
+      products = products.filter(p => p.id !== id);
+      saveProducts();
+      showToast(`Removed "${prodName}" from catalog.`);
+    }
+
+    // Reset Catalog to Default
+    function resetToDefaultCatalog() {
+      products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+      saveProducts();
+      showToast("Reset to default PureTouch product catalog.");
+    }
+
+    // Modal Display Controls
+    function openCatalogModal() {
+      renderAdminTable();
+      document.getElementById('catalogModal').classList.remove('hidden');
+    }
+
+    function closeCatalogModal() {
+      document.getElementById('catalogModal').classList.add('hidden');
+    }
+
+    // Mobile Navbar Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('mobileMenuIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars';
+      } else {
+        icon.className = 'fa-solid fa-xmark';
+      }
+    }
+
+    // Contact & Bulk Inquiry Form via WhatsApp
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('inqName').value.trim();
+      const phone = document.getElementById('inqPhone').value.trim();
+      const product = document.getElementById('inqProduct').value;
+      const qty = document.getElementById('inqQty').value.trim() || 'Not specified';
+      const notes = document.getElementById('inqNotes').value.trim() || 'None';
+
+      const message = `*PureTouch Household Products Inquiry*\n` +
+                      `-------------------------------\n` +
+                      `*Customer Name:* ${name}\n` +
+                      `*Phone:* ${phone}\n` +
+                      `*Interested Product:* ${product}\n` +
+                      `*Quantity:* ${qty}\n` +
+                      `*Address/Notes:* ${notes}\n` +
+                      `-------------------------------\n` +
+                      `_Attention: Mohammed Ilyas Teli / Proprietor: Noorjahan Teli_`;
+
+      const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      showToast("Inquiry generated! Redirecting to WhatsApp...");
+    }
+
+    // Initial Load
+    window.onload = function () {
+      renderCatalog();
+    };
+  </script>
+</body>
+</html>
